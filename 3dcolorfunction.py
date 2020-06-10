@@ -6,14 +6,17 @@ import mpl_toolkits.mplot3d.art3d as art3d
 import matplotlib.cm as cm
 import matplotlib as mpl
 
+# Create dataframe
 empty = {}
 df = pd.DataFrame(empty)
 
+# Create a large number of random points in 3D space that will represent color
 number= 10000
 df["x"]= np.random.uniform(low=-1., high=1., size=(number,))
 df["y"]= np.random.uniform(low=-1., high=1., size=(number,))
 df["z"]= np.random.uniform(low=-1., high=1., size=(number,))
 
+# Specify the function to have values between 0 and 1
 color_list=[]
 n=0
 while n<=len(df["x"])-1:
@@ -30,8 +33,10 @@ while n<=len(df["x"])-1:
 
 df["color"]=color_list
 
+# Import data to draw lines (Could be used to draw molecules later on)
 data_df = pd.read_excel(r"data.xlsx", sheet_name=0)
 
+# Create the figure
 fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
 
