@@ -1,0 +1,11 @@
+(T/F) Manual version control actually has many advantages and it is often difficult to determine if you should use git/github or not. (F)
+
+(T/F) There are two types of repos: local and remote. (T)
+
+(T/F) git is the underlying version control software whereas Github is a commercial implementation leveraging the technology for remote use. (T)
+
+(T/F) When starting a repo, you CANNOT have any files in the initial directory. (F)
+
+Bug busters: You have been working very hard on a team repository and making great progress. You have been saving your amazing files to your local repo using $ git commit to avoid losing progress. When your co-worker Allison clones in the repo, however, she does not see the work you have done. What could be going on here?
+
+You did not "git push" the changes in your local repo to the remote repo.  Allison is cloning into the remote repo, so she doesn't see your changes that are stored in your local repo.
